@@ -153,14 +153,22 @@ fn main(){
     println!("The value of x is: {x}");
 
     let mut y = 10;
-    println!("The value of y is: {x}");
+    println!("The value of y is: {y}");
 
     y = 15;
-    println!("The value of y is: {x}");
+    println!("The value of y is: {y}");
 
     /*
     y = "ystring";
     println!("The value of y is: {y}");
     */
+
+
+    {
+        // y shadowed by this scope
+
+        y = y * 2;
+        println!("The value of y is: {y}");
+    }
 
 }
